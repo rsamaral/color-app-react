@@ -1,5 +1,16 @@
-const Palette = () => {
-  return <h1>Palette</h1>;
+import ColorBox from './ColorBox';
+import './Palette.css';
+
+const Palette = ({ colors }) => {
+  const colorBoxes = colors.map((color) => (
+    <ColorBox background={color.color} name={color.name} key={color.name} />
+  ));
+
+  return (
+    <div className='Palette'>
+      <div className='Palette-colors'>{colorBoxes}</div>
+    </div>
+  );
 };
 
 export default Palette;
