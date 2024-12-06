@@ -1,9 +1,9 @@
 import ColorBox from './ColorBox';
 import './Palette.css';
 
-const Palette = ({ colors }) => {
-  const colorBoxes = colors.map((color) => (
-    <ColorBox background={color.color} name={color.name} key={color.name} />
+const Palette = ({ palette }) => {
+  const colorBoxes = palette.colors[300].map((color) => (
+    <ColorBox background={color.hex} name={color.name} key={color.name} />
   ));
 
   return (
